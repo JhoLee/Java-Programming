@@ -36,7 +36,7 @@ public class ArrayUtility2
 
     static int[] remove(int[] s1, int[] s2)
     {
-        int[] iTempAry2 = new int[s1.length + s2.length];
+        int[] iTempAry2 = new int[s1.length];
         int num = 0;
         for (int i = 0; i < s1.length; i++)
         {
@@ -49,28 +49,56 @@ public class ArrayUtility2
 
         }
 
-        return iTempAry2;
+        int[] iTempAry3 = new int[num];
+        for (int i = 0; i < iTempAry3.length; i++)
+            iTempAry3[i] = iTempAry2[i];
+
+        return iTempAry3;
     }
 
     public static void main(String args[])
     {
-        Scanner input = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        int[] iAry1 = new int[2];
-        System.out.print("Enter two numbers >> ");
-        for (int i = 0; i < 2; i++)
-            iAry1[i] = input.nextInt();
+        // Enter the elements of iAry1
+        System.out.print("Enter the size of Array1 >> ");
+        int length1 = scan.nextInt();
 
-        int[] iAry2 = new int[3];
-        System.out.print("Enter three numbers >> ");
-        for (int i = 0; i < 3; i++)
-            iAry2[i] = input.nextInt();
+        int[] iAry1 = new int[length1];
+        System.out.print("Enter ");
+        System.out.print(length1 + " elements of Array1 >> ");
+        for (int i = 0; i < iAry1.length; i++)
+            iAry1[i] = scan.nextInt();
 
-        int length = iAry1.length + iAry2.length;
-        int[] tempAry = concat(iAry1, iAry2);
+        // Enter the elements of iAry1
+        System.out.print("Enter the size of Array1 >> ");
+        int length2 = scan.nextInt();
 
-        for (int num : tempAry)
-            System.out.println(num);
+        int[] iAry2 = new int[length2];
+        System.out.print("Enter ");
+        System.out.print(length2 + " elements of Array2 >> ");
+        for (int i = 0; i < iAry2.length; i++)
+            iAry2[i] = scan.nextInt();
+
+        // 'tempAry1' = 'iAry1' + 'iAry2'
+        int[] tempAry1 = concat(iAry1, iAry2);
+
+        // 'tempAry2' = 'iAry1' - 'iAry2'
+        int[] tempAry2 = remove(iAry1, iAry2);
+
+        // Print 'tempAry1'
+        System.out.print("Array1 + Array2 = { ");
+        for (int num : tempAry1)
+
+            System.out.print(num + " ");
+        System.out.println("}");
+
+        // Print 'tempAry2'
+        System.out.print("Array1 - Array2 = { ");
+        for (int num : tempAry2)
+
+            System.out.print(num + " ");
+        System.out.println("}");
 
     }
 }
