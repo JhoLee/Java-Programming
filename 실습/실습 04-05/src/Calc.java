@@ -13,12 +13,13 @@
  */
 
 // This file includes the 'main method'.
-
 import java.util.Scanner;
 
 class Add
 {
+
     private int a;
+
     private int b;
 
     public void setValue(int a, int b)
@@ -31,12 +32,13 @@ class Add
     {
         return (a + b);
     }
-
 }
 
 class Sub
 {
+
     private int a;
+
     private int b;
 
     public void setValue(int a, int b)
@@ -49,12 +51,13 @@ class Sub
     {
         return (a - b);
     }
-
 }
 
 class Mul
 {
+
     private int a;
+
     private int b;
 
     public void setValue(int a, int b)
@@ -67,12 +70,13 @@ class Mul
     {
         return (a * b);
     }
-
 }
 
 class Div
 {
+
     private int a;
+
     private int b;
 
     public void setValue(int a, int b)
@@ -83,19 +87,21 @@ class Div
 
     public int calculate()
     {
-        return (a / b);
+        if (b == 0)
+            return -295;
+        else
+            return (a / b);
     }
-
 }
 
 // This class includes 'main method'
 public class Calc
 {
+
     public static int iCalc(int x, int y, char op)
     {
         switch (op)
         {
-
             case '+':
                 Add add = new Add();
                 add.setValue(x, y);
@@ -104,7 +110,6 @@ public class Calc
                 Sub sub = new Sub();
                 sub.setValue(x, y);
                 return sub.calculate();
-
             case '*':
                 Mul mul = new Mul();
                 mul.setValue(x, y);
@@ -115,7 +120,6 @@ public class Calc
                 return div.calculate();
             default:
                 return -295;
-
         }
     }
 
@@ -127,18 +131,16 @@ public class Calc
             Scanner scan = new Scanner(System.in);
             System.out.println("두 정수와 연산자를 입력하시오(postfix)");
             System.out.print("Ex)\"3+4\" -> \"3 4 +\" >> ");
-
             int x = scan.nextInt();
             int y = scan.nextInt();
             char op = scan.next().charAt(0);
-
             // Calculation
             result = iCalc(x, y, op);
-            if (result == -295) System.out.println("Input ERROR");
-            else System.out.println(result);
-            
+            if (result == -295)
+                System.out.println("Input ERROR");
+            else
+                System.out.println(result);
             System.out.println();
-
         }
     }
 }
