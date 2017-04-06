@@ -5,23 +5,23 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		// ½ºÅÃ ¹è¿­ »ı¼º
-		System.out.println("»ı¼ºÇÒ ½ºÅÃ ¸Ş¸ğ¸®ÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À >> ");
+		// ìŠ¤íƒ ë°°ì—´ ìƒì„±
+		System.out.println("ìƒì„±í•  ìŠ¤íƒ ë©”ëª¨ë¦¬ì˜ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ >> ");
 		int num = scan.nextInt();
 		Stack[] stackArray = new Stack[num];
 
-		// ¸Ş´º
+		// ë©”ë‰´
 		for (int i = 1; i <= stackArray.length; i++) {
 
-			System.out.print("(" + i + ")¹ø ½ºÅÃ ");
+			System.out.print("(" + i + ")ë²ˆ ìŠ¤íƒ ");
 			if (i % 3 == 0)
 				System.out.println();
 		}
-		System.out.println("Á¢±ÙÇÒ ½ºÅÃÀÇ ¹øÈ£¸¦ ÀÔ·Â >> ");
+		System.out.println("ì ‘ê·¼í•  ìŠ¤íƒì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥ >> ");
 		int n = scan.nextInt();
 
-		// n¹ø ½ºÅÃ Á¢±Ù
+		// në²ˆ ìŠ¤íƒ ì ‘ê·¼
 
 	}
-
+ 
 }
