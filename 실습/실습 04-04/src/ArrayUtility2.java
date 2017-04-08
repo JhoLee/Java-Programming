@@ -72,13 +72,13 @@ public class ArrayUtility2
         for (int i = 0; i < iAry1.length; i++)
             iAry1[i] = scan.nextInt();
 
-        // Enter the size of iAry1
+        // Enter the size of iAry2
         System.out.print("Enter the size of Array1 >> ");
         int length2 = scan.nextInt();
 
         int[] iAry2 = new int[length2];
 
-        // Enter the elements of iAry1
+        // Enter the elements of iAry2
         System.out.print("Enter ");
         System.out.print(length2 + " elements of Array2 >> ");
         for (int i = 0; i < iAry2.length; i++)
