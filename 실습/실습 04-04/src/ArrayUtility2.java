@@ -7,7 +7,7 @@
  *    |_ ArrayUtility2.java
  * </pre>
  * 
- * @date : 2017. 4. 4. ¿ÀÀü 12:57:06
+ * @date : 2017. 4. 4. Â¿Ã€Ã€Ã¼ 12:57:06
  * @version :
  * @author : Jho
  */
@@ -60,21 +60,25 @@ public class ArrayUtility2
     {
         Scanner scan = new Scanner(System.in);
 
-        // Enter the elements of iAry1
+        // Enter the size of iAry1
         System.out.print("Enter the size of Array1 >> ");
         int length1 = scan.nextInt();
 
         int[] iAry1 = new int[length1];
+
+        // Enter the elements of iAry1
         System.out.print("Enter ");
         System.out.print(length1 + " elements of Array1 >> ");
         for (int i = 0; i < iAry1.length; i++)
             iAry1[i] = scan.nextInt();
 
-        // Enter the elements of iAry1
+        // Enter the size of iAry1
         System.out.print("Enter the size of Array1 >> ");
         int length2 = scan.nextInt();
 
         int[] iAry2 = new int[length2];
+
+        // Enter the elements of iAry1
         System.out.print("Enter ");
         System.out.print(length2 + " elements of Array2 >> ");
         for (int i = 0; i < iAry2.length; i++)
