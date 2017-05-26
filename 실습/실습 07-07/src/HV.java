@@ -12,11 +12,21 @@
  * @author : Jho
  */
 
+/*
+ * <실행결과>
+ * 119
+ * 112
+ * 114
+ * 
+ */
 import java.util.*;
 
 public class HV {
     public static Vector<String> hashToVector(HashMap<String, String> h) {
-        // 작성 필요
+        // 작성 부분
+        Vector<String> vTmp = new Vector<String>();
+        vTmp.addAll(h.values());
+        return vTmp;
     }
 
     public static void main(String[] args) {
